@@ -1,0 +1,767 @@
+
+<!--  <!DOCTYPE html>
+<html xmlns:th="htttp://thymeleaf.org">
+<head>
+<title>TestJSP</title>
+</head>
+<body>
+	<table>
+		<tr th:each="item: ${item}">
+			<td th:text="${item.item_id}" />
+			<td th:text="${item.item}" />
+			
+			<div th:if="${item.item_id%2==1}">
+		</tr>
+	</table>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="htttp://thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Rögener Hütte</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+
+<!-- Fontawesome icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+	rel="stylesheet">
+<link href="assets/vendor/boxicons/css/boxicons.min.css"
+	rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css"
+	rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body
+	style='background: url("assets/img/chefs-bg.jpg"); background: rgba(255, 255, 255, 0.08);'>
+
+	<!-- ======= Header ======= -->
+	<header id="header"
+		class="fixed-top d-flex align-items-center header-transparent">
+		<div
+			class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+			<div class="logo me-auto">
+				<!-- <h1><a href="index.html">Kri</a></h1> -->
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<a href="index.html"><img src="assets/img/logo.png" alt=""
+					class="img-fluid"></a>
+			</div>
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+					<li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+					<li><a class="nav-link scrollto" href="#events">Events</a></li>
+					<li><a class="nav-link scrollto" href="#about">About</a></li>
+					<li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
+					<li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+			<!-- .navbar -->
+
+
+
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero">
+		<div class="hero-container">
+			<div id="heroCarousel" data-bs-interval="5000"
+				class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+				<ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+				<div class="carousel-inner" role="listbox">
+
+					<!-- Slide 1 -->
+					<div class="carousel-item active"
+						style="background: url(assets/img/slide/slide-1.jpg); background-repeat: no-repeat; background-size: cover;">
+						<div class="carousel-container">
+							<div class="carousel-content">
+								<!-- <h2 class="animate__animated animate__fadeInDown logo-font"><span>Rögener</span> Hütte</h2> -->
+								<div class="banner">
+									<img src="assets/img/banner.png"
+										class="animate__animated animate__fadeInDown">
+								</div>
+
+
+								<p class="animate__animated animate__fadeInUp">Bitte
+									schreiben Sie, was Sie wünschen, Slogan oder Schlagwort Ihres
+									Restaurants</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="carousel-item"
+						style="background: url(assets/img/slide/slide-2.jpg); background-repeat: no-repeat; background-size: cover;">
+						<div class="carousel-container">
+							<div class="carousel-content">
+								<!-- <h2 class="animate__animated animate__fadeInDown logo-font"><span>Rögener</span> Hütte</h2> -->
+								<div class="banner">
+									<img src="assets/img/banner.png"
+										class="animate__animated animate__fadeInDown ">
+								</div>
+
+								<p class="animate__animated animate__fadeInUp">Bitte
+									schreiben Sie, was Sie wünschen, Slogan oder Schlagwort Ihres
+									Restaurants</p>
+
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<a class="carousel-control-prev" href="#heroCarousel" role="button"
+					data-bs-slide="prev"> <span
+					class="carousel-control-prev-icon bi bi-chevron-left"
+					aria-hidden="true"></span>
+				</a> <a class="carousel-control-next" href="#heroCarousel" role="button"
+					data-bs-slide="next"> <span
+					class="carousel-control-next-icon bi bi-chevron-right"
+					aria-hidden="true"></span>
+				</a>
+
+			</div>
+		</div>
+	</section>
+	<!-- End Hero -->
+
+	<main id="main">
+
+
+		<!-- ======= Menu Section ======= -->
+		<section id="menu" class="menu menuBg">
+			<div class="container">
+				<div class="section-title">
+					<h2>
+						Check our tasty <span>Menu</span>
+					</h2>
+					<br />
+					<h4>
+						<a href="pdf/Thomas.pdf" target="_blank">Open</a> or <a
+							href="#menu" onclick="qrModalFunciton();">scan</a> the PDF
+					</h4>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12 d-flex justify-content-center">
+						<ul id="menu-flters">
+							<li data-filter="*" class="filter-active">Show All</li>
+							<li data-filter=".filter-speiskarte">Speiskarte</li>
+							<li data-filter=".filter-abends-karte">Abends Karte</li>
+							<li data-filter=".filter-sonntags-karte">Sonntags Karte</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row menu-container">
+
+					<div th:each="itemVar: ${item}">
+
+						<div th:if="${itemVar.category_id==1}">
+							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-speiskarte">
+								<div class="menu-content">
+									<a href="#">
+										<td th:text="${itemVar.item}" />
+									</a> <span> €
+										<td th:text="${itemVar.price}" />
+									</span>
+								</div>
+								<div class="menu-ingredients">Lorem, deren, trataro,
+									filede, nerada</div>
+							</div>
+						</div>
+						
+						<div th:if="${itemVar.category_id==2}">
+							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-abends-karte">
+								<div class="menu-content">
+									<a href="#">
+										<td th:text="${itemVar.item}" />
+									</a> <span> €
+										<td th:text="${itemVar.price}" />
+									</span>
+								</div>
+								<div class="menu-ingredients">Lorem, deren, trataro,
+									filede, nerada</div>
+							</div>
+						</div>
+						
+						<div th:if="${itemVar.category_id==3}">
+							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-sonntags-karte">
+								<div class="menu-content">
+									<a href="#">
+										<td th:text="${itemVar.item}" />
+									</a> <span> €
+										<td th:text="${itemVar.price}" />
+									</span>
+								</div>
+								<div class="menu-ingredients">Lorem, deren, trataro,
+									filede, nerada</div>
+							</div>
+						</div>
+
+					</div>
+
+<!-- 
+					<div class="col-lg-6 menu-item filter-specialty">
+						<div class="menu-content">
+							<a href="#">Bread barrel</a><span>€6.95</span>
+						</div>
+						<div class="menu-ingredients">Lorem, deren, trataro, filede,
+							nerada</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-starters">
+						<div class="menu-content">
+							<a href="#">Pulled Pork</a><span>€7.95</span>
+						</div>
+						<div class="menu-ingredients">A delicate pulled pork cake
+							served on a toasted roll with lettuce and tartar sauce</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-salads">
+						<div class="menu-content">
+							<a href="#">Biryani</a><span>€8.95</span>
+						</div>
+						<div class="menu-ingredients">Lorem, deren, trataro, filede,
+							nerada</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-specialty">
+						<div class="menu-content">
+							<a href="#">Chicken Grilled</a><span>€9.95</span>
+						</div>
+						<div class="menu-ingredients">Grilled chicken with
+							provolone, artichoke hearts, and roasted red pesto</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-starters">
+						<div class="menu-content">
+							<a href="#">Mozzarella Stick</a><span>€4.95</span>
+						</div>
+						<div class="menu-ingredients">Lorem, deren, trataro, filede,
+							nerada</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-salads">
+						<div class="menu-content">
+							<a href="#">Potato Salad</a><span>€9.95</span>
+						</div>
+						<div class="menu-ingredients">Fresh spinach, crisp potatoes,
+							and Greek olives</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-salads">
+						<div class="menu-content">
+							<a href="#">Spinach Curry</a><span>€9.95</span>
+						</div>
+						<div class="menu-ingredients">Fresh spinach with mushrooms,
+							hard boiled egg</div>
+					</div>
+
+					<div class="col-lg-6 menu-item filter-specialty">
+						<div class="menu-content">
+							<a href="#">Lobster Roll</a><span>€12.95</span>
+						</div>
+						<div class="menu-ingredients">Plump lobster meat, mayo and
+							crisp lettuce on a toasted bulky roll</div>
+					</div>
+
+	-->
+
+				</div>
+		</section>
+		<!-- End Menu Section -->
+
+		<!-- ======= Events Section ======= -->
+		<section id="events" class="events">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>
+						Organize Your <span>Events</span> in our Restaurant
+					</h2>
+				</div>
+
+				<div class="events-slider swiper-container">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide">
+							<div class="row event-item">
+								<div class="col-lg-6">
+									<img src="assets/img/event-birthday.jpg" class="img-fluid"
+										alt="">
+								</div>
+								<div class="col-lg-6 pt-4 pt-lg-0 content">
+									<h3>Birthday Parties</h3>
+									<div class="price">
+										<p>
+											<span>$189</span>
+										</p>
+									</div>
+									<p class="fst-italic">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut labore et dolore magna aliqua.</p>
+									<ul>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+										<li><i class="bi bi-check-circle"></i> Duis aute irure
+											dolor in reprehenderit in voluptate velit.</li>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+									</ul>
+									<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur</p>
+								</div>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+						<div class="swiper-slide">
+							<div class="row event-item">
+								<div class="col-lg-6">
+									<img src="assets/img/event-private.jpg" class="img-fluid"
+										alt="">
+								</div>
+								<div class="col-lg-6 pt-4 pt-lg-0 content">
+									<h3>Private Parties</h3>
+									<div class="price">
+										<p>
+											<span>$290</span>
+										</p>
+									</div>
+									<p class="fst-italic">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut labore et dolore magna aliqua.</p>
+									<ul>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+										<li><i class="bi bi-check-circle"></i> Duis aute irure
+											dolor in reprehenderit in voluptate velit.</li>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+									</ul>
+									<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur</p>
+								</div>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+						<div class="swiper-slide">
+							<div class="row event-item">
+								<div class="col-lg-6">
+									<img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
+								</div>
+								<div class="col-lg-6 pt-4 pt-lg-0 content">
+									<h3>Custom Parties</h3>
+									<div class="price">
+										<p>
+											<span>$99</span>
+										</p>
+									</div>
+									<p class="fst-italic">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit, sed do eiusmod tempor incididunt
+										ut labore et dolore magna aliqua.</p>
+									<ul>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+										<li><i class="bi bi-check-circle"></i> Duis aute irure
+											dolor in reprehenderit in voluptate velit.</li>
+										<li><i class="bi bi-check-circle"></i> Ullamco laboris
+											nisi ut aliquip ex ea commodo consequat.</li>
+									</ul>
+									<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur</p>
+								</div>
+							</div>
+						</div>
+						<!-- End testimonial item -->
+
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End Events Section -->
+
+		<!-- ======= About Section ======= -->
+		<section id="about" class="about">
+			<div class="container-fluid">
+
+				<div class="row">
+
+					<div class="col-lg-5 align-items-stretch video-box"
+						style='background-image: url("assets/img/img dump/img1.jpg");'>
+					</div>
+
+					<div
+						class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+
+						<div class="content">
+							<h3>
+								Eum ipsam laborum deleniti <strong>velit pariatur
+									architecto aut nihil</strong>
+							</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna
+								aliqua. Duis aute irure dolor in reprehenderit</p>
+							<p class="fst-italic">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore magna aliqua.</p>
+							<ul>
+								<li><i class="bx bx-check-double"></i> Ullamco laboris nisi
+									ut aliquip ex ea commodo consequat.</li>
+								<li><i class="bx bx-check-double"></i> Duis aute irure
+									dolor in reprehenderit in voluptate velit.</li>
+								<li><i class="bx bx-check-double"></i> Ullamco laboris nisi
+									ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+									reprehenderit in voluptate trideta storacalaperda mastiro
+									dolore eu fugiat nulla pariatur.</li>
+							</ul>
+							<p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt
+								mollit anim id est laborum</p>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End About Section -->
+
+
+
+
+
+		<!-- ======= Chefs Section ======= -->
+		<section id="chefs" class="chefs">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>
+						Our Professional <span>Chefs</span>
+					</h2>
+					<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis
+						est adipisci expedita at voluptas atque vitae autem.</p>
+				</div>
+
+				<div class="row">
+
+					<div class="col-lg-4 col-md-6">
+						<div class="member">
+							<div class="pic">
+								<img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="member-info">
+								<h4>Thomas BH</h4>
+								<span>Master Chef</span>
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="member">
+							<div class="pic">
+								<img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="member-info">
+								<h4>Kri Muru</h4>
+								<span>Patissier</span>
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="member">
+							<div class="pic">
+								<img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="member-info">
+								<h4>Thomas Hennig</h4>
+								<span>Cook</span>
+								<div class="social">
+									<a href=""><i class="bi bi-twitter"></i></a> <a href=""><i
+										class="bi bi-facebook"></i></a> <a href=""><i
+										class="bi bi-instagram"></i></a> <a href=""><i
+										class="bi bi-linkedin"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Chefs Section -->
+
+		<!-- ======= Gallery Section ======= -->
+		<section id="gallery" class="gallery">
+			<div class="container-fluid">
+
+				<div class="section-title">
+					<h2>
+						<span>Photos</span>
+					</h2>
+				</div>
+
+				<div id="galleryContainer" class="row no-gutters">
+
+					<!-- <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                <div id="kri"></div>
+              </a>
+            </div>
+          </div>
+ -->
+
+					<script type="text/javascript">
+						//  var imgEle = document.createElement("img");
+						//  imgEle.src="assets/img/gallery/gallery-1.jpg";
+
+						// anchorElement.append(imgEle);
+
+						for (var i = 1; i <= 12; i++) {
+							var divElement = document.createElement("div");
+							divElement.className = "col-lg-3 col-md-4";
+
+							var innerDivElement = document.createElement("div");
+							innerDivElement.className = "gallery-item";
+
+							var anchorElement = document.createElement("a");
+							anchorElement.className = "gallery-lightbox";
+
+							var imgEle = document.createElement("img");
+							imgEle.src = "assets/img/gallery/gallery-" + i
+									+ ".jpg";
+							imgEle.className = "img-fluid";
+							imgEle.maxHeight = "100px";
+
+							anchorElement.append(imgEle);
+							innerDivElement.append(anchorElement);
+							divElement.append(innerDivElement);
+							document.getElementById("galleryContainer").append(
+									divElement);
+						}
+					</script>
+
+
+
+
+				</div>
+
+			</div>
+		</section>
+		<!-- End Gallery Section -->
+
+
+
+		<!--  <div id="contact" class="contact">
+
+      <div class="container">
+        <div class="container mt-5">
+          <h3>Contact Us</h3>
+        <div class="info-wrap">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 info">               
+                <h4>Location:</h4>
+                <p>Löbelsteiner Str. 81,<br>96450 Coburg</p>
+              </div>
+              <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">               
+                <h4>Social Links:</h4>
+                
+              </div>
+              <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                <h4>Call:</h4>
+                <p>09561 6799811</p>
+              </div>
+              <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                <h4>Email:</h4>
+                <p>roegenerhuette@gmail.com</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact" class="contact">
+			<div class="container">
+
+				<div class="section-title">
+					<h2>
+						<span>Contact</span> Us
+					</h2>
+				</div>
+			</div>
+
+
+
+			<div class="container mt-5">
+
+				<div class="info-wrap">
+
+					<div class="row">
+						<div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+							<h4>Open Hours:</h4>
+							<p>
+								Mo: 4pm - 11pm <br /> Di: Geschlossen <br /> Mi: 4pm - 11pm <br />
+								Do: 4pm - 11pm <br /> Fr: 4pm - 11pm <br /> Sa: 4pm - 11pm <br />
+								So: 11am - 11pm
+
+							</p>
+						</div>
+
+						<div class="col-lg-3 col-md-6 info">
+							<h4>Location:</h4>
+							<p>
+								Löbelsteiner Str. 81,<br>96450 Coburg
+							</p>
+						</div>
+
+						<div class="col-lg-3 col-md-6">
+
+							<h4>Social Links:</h4>
+
+							<a class="info" href="mailto:roegenerhuette@gmail.com"> <i
+								class="fa fa-envelope"></i>
+							</a> <a class="info" href="https://www.facebook.com/roegenerhuette/"
+								target="_blank"> <i class="fa fa-facebook"></i>
+							</a> <a class="info" href="#"> <i class="fa fa-phone"></i>
+							</a>
+
+
+						</div>
+
+
+						<div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+
+							<h4>Call:</h4>
+							<p>09561 6799811</p>
+						</div>
+
+
+					</div>
+				</div>
+
+
+			</div>
+		</section>
+		<!-- End Contact Section -->
+
+
+	</main>
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+
+		<div class="container">
+			<img src="assets/img/banner.png" class="footer-banner">
+			<p>
+				<br /> Bitte schreiben Sie, was Sie wünschen, Slogan oder
+				Schlagwort Ihres Restaurants
+			</p>
+			<div class="copyright">
+				<strong><span> &copy; Rögener Hütte</span></strong>. <br />
+				<p id="urlText">www.roegnerhuette.com</p>
+				<br /> <a href="impressum.html" target="_blank">Impressum</a>
+			</div>
+			<div class="credits">
+				<br /> Developed by <a
+					href="https://www.linkedin.com/in/kritika-murugan-621795123/"
+					target="_blank">Kritika Murugan</a>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- Floating buttons for share and QR Code -->
+
+	<!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+	<!--  <button onclick="copyFunction()" class="floatingButtons ripple" style="bottom: 45px; background: #00833e; color: #FFFFFF;"><i class="fa fa-share-alt"></i></button>  -->
+	<button onclick="qrModalFunciton();" class="floatingButtons ripple"
+		style="bottom: 45px;">
+		<i class="fa fa-qrcode"></i>
+	</button>
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="openQR">
+		<span class="close">&times;</span> <img class="modal-content"
+			id="img01">
+		<div id="caption"></div>
+	</div>
+
+
+	<!--  <a href="https://www.facebook.com/roegenerhuette/" target="_blank"><button class="floatingButtons ripple" style="bottom: 195px; background: #4267B2; color: #FFFFFF;"><i class="fa fa-facebook"></i></button></a>
+ -->
+	<!-- Vendor JS Files -->
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="assets/vendor/php-email-form/validate.js"></script>
+	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Template Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/qrModal.js"></script>
+	<script src="assets/js/copyToClipboard.js"></script>
+
+
+
+
+</body>
+
+</html>

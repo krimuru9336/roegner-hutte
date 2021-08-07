@@ -1363,6 +1363,15 @@ section {
   color: #fff;
 }
 
+.tooltipHoverContainer{
+	background-color: red;
+}
+
+/*
+.tooltip {
+	visibility:hidden;
+} */
+
 /*--------------------------------------------------------------
 # Floating Action Buttons
 --------------------------------------------------------------*/

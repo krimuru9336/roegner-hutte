@@ -162,7 +162,7 @@
 					</h2>
 					<br />
 					<h4>
-						<a href="pdf/Thomas.pdf" target="_blank">Open</a> or <a
+						<a href="/assets/pdf/Thomas.pdf" target="_blank">Open</a> or <a
 							href="#menu" onclick="qrModalFunciton();">scan</a> the PDF
 					</h4>
 				</div>
@@ -183,7 +183,8 @@
 					<div th:each="itemVar: ${item}">
 
 						<div th:if="${itemVar.category_id==1}">
-							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-speiskarte">
+							<div style="padding-left: 30px;"
+								class="col-lg-6 menu-item filter-speiskarte">
 								<div class="menu-content">
 									<a href="#">
 										<td th:text="${itemVar.item}" />
@@ -195,9 +196,10 @@
 									filede, nerada</div>
 							</div>
 						</div>
-						
+
 						<div th:if="${itemVar.category_id==2}">
-							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-abends-karte">
+							<div style="padding-left: 30px;"
+								class="col-lg-6 menu-item filter-abends-karte">
 								<div class="menu-content">
 									<a href="#">
 										<td th:text="${itemVar.item}" />
@@ -209,9 +211,10 @@
 									filede, nerada</div>
 							</div>
 						</div>
-						
+
 						<div th:if="${itemVar.category_id==3}">
-							<div style="padding-left:30px;" class="col-lg-6 menu-item filter-sonntags-karte">
+							<div style="padding-left: 30px;"
+								class="col-lg-6 menu-item filter-sonntags-karte">
 								<div class="menu-content">
 									<a href="#">
 										<td th:text="${itemVar.item}" />
@@ -226,7 +229,7 @@
 
 					</div>
 
-<!-- 
+					<!-- 
 					<div class="col-lg-6 menu-item filter-specialty">
 						<div class="menu-content">
 							<a href="#">Bread barrel</a><span>€6.95</span>
@@ -577,6 +580,8 @@
 
 							var anchorElement = document.createElement("a");
 							anchorElement.className = "gallery-lightbox";
+							anchorElement.href = "assets/img/gallery/gallery-"
+									+ i + ".jpg"
 
 							var imgEle = document.createElement("img");
 							imgEle.src = "assets/img/gallery/gallery-" + i
@@ -667,20 +672,40 @@
 							<p>
 								Löbelsteiner Str. 81,<br>96450 Coburg
 							</p>
+							<a class="info" href="https://g.page/roegenerhuette?share"
+								target="_blank" data-toggle="tooltip" title="Click to Open Maps">
+								<i class="fa fa-map-marker"></i>
+							</a>
+
+
+
 						</div>
 
 						<div class="col-lg-3 col-md-6">
 
 							<h4>Social Links:</h4>
 
-							<a class="info" href="mailto:roegenerhuette@gmail.com"> <i
+							<a class="info" href="mailto:roegenerhuette@gmail.com"
+								data-toggle="tooltip" title="roegenerhuette@gmail.com"> <i
 								class="fa fa-envelope"></i>
 							</a> <a class="info" href="https://www.facebook.com/roegenerhuette/"
-								target="_blank"> <i class="fa fa-facebook"></i>
-							</a> <a class="info" href="#"> <i class="fa fa-phone"></i>
+								target="_blank" data-toggle="tooltip"
+								title="https://www.facebook.com/roegenerhuette/"> <i
+								class="fa fa-facebook"></i>
 							</a>
 
-
+							<!-- 
+								
+								<a class="info" data-toggle="tooltip" title="09561 6799811">
+								<i class="fa fa-phone"></i>
+							</a> -->
+							<script>
+								$(document).ready(function() {
+									$('[data-toggle="tooltip"]').tooltip({
+										trigger : 'hover'
+									});
+								});
+							</script>
 						</div>
 
 
@@ -708,11 +733,11 @@
 
 
 		<div class="container">
-			<img src="assets/img/banner.png" class="footer-banner">
+			<!--	<img src="assets/img/banner.png" class="footer-banner"> 
 			<p>
 				<br /> Bitte schreiben Sie, was Sie wünschen, Slogan oder
 				Schlagwort Ihres Restaurants
-			</p>
+			</p> -->
 			<div class="copyright">
 				<strong><span> &copy; Rögener Hütte</span></strong>. <br />
 				<p id="urlText">www.roegnerhuette.com</p>

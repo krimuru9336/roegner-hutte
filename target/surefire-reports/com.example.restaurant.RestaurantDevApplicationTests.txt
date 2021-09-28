@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.restaurant.RestaurantDevApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.29 s <<< FAILURE! - in com.example.restaurant.RestaurantDevApplicationTests
-contextLoads  Time elapsed: 0.002 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
-Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server.
-Caused by: java.sql.SQLNonTransientConnectionException: Could not create connection to database server.
-Caused by: java.lang.RuntimeException: Unable to obtain credentials to communicate with the Cloud SQL API
-Caused by: java.io.IOException: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.24 s - in com.example.restaurant.RestaurantDevApplicationTests

@@ -15,7 +15,7 @@
 	<name>restaurant-dev</name>
 	<description>Project for restaurant</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	

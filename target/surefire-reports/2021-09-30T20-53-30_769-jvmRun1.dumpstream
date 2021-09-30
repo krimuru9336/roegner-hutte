@@ -1,0 +1,97 @@
+# Created at 2021-09-30T20:53:33.027
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2021-09-30T20:53:34.524
+Unexpected IOException with stream: 2021-09-30 20:53:34.520  INFO 18704 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+
+
+# Created at 2021-09-30T20:53:35.691
+Unexpected IOException with stream: 2021-09-30 20:53:35.689  INFO 18704 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+
+
+# Created at 2021-09-30T20:53:36.578
+Unexpected IOException with stream: 2021-09-30 20:53:36.577  INFO 18704 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+
+
+# Created at 2021-09-30T20:53:36.964
+Unexpected IOException with stream: 2021-09-30 20:53:36.963  INFO 18704 --- [           main] c.e.r.RestaurantDevApplicationTests      : Started RestaurantDevApplicationTests in 4.282 seconds (JVM running for 5.65)
+
+
+# Created at 2021-09-30T20:53:37.010
+Unexpected IOException with stream: Ice Cream
+
+
+# Created at 2021-09-30T20:53:37.011
+Unexpected IOException with stream: Fries
+
+
+# Created at 2021-09-30T20:53:37.012
+Unexpected IOException with stream: Sambhar
+
+
+# Created at 2021-09-30T20:53:37.012
+Unexpected IOException with stream: Fish
+
+
+# Created at 2021-09-30T20:53:37.013
+Unexpected IOException with stream: Chicken
+
+
+# Created at 2021-09-30T20:53:37.013
+Unexpected IOException with stream: Pork
+
+
+# Created at 2021-09-30T20:53:37.014
+Unexpected IOException with stream: Beef
+
+
+# Created at 2021-09-30T20:53:37.015
+Unexpected IOException with stream: Dosa
+
+
+# Created at 2021-09-30T20:53:37.015
+Unexpected IOException with stream: Ribchen
+
+
+# Created at 2021-09-30T20:53:37.016
+Unexpected IOException with stream: Cola
+
+
+# Created at 2021-09-30T20:53:37.016
+Unexpected IOException with stream: Noodles
+
+
+# Created at 2021-09-30T20:53:37.017
+Unexpected IOException with stream: Rice
+
+
+# Created at 2021-09-30T20:53:37.017
+Unexpected IOException with stream: Egg
+
+
+# Created at 2021-09-30T20:53:37.018
+Unexpected IOException with stream: Curd
+
+
+# Created at 2021-09-30T20:53:37.018
+Unexpected IOException with stream: Milk
+
+
+# Created at 2021-09-30T20:53:37.047
+Unexpected IOException: 5,1,com.example.restaurant.RestaurantDevApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-09-30T20:53:37.269
+Unexpected IOException: 6,1,com.example.restaurant.RestaurantDevApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-09-30T20:53:37.273
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.example.restaurant.RestaurantDevApplicationTests,null,null,null
+
+
